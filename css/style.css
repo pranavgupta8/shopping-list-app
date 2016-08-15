@@ -1,3 +1,40 @@
+@font-face {
+	font-family: hamster;
+	src: url('../fonts/hamster.otf');
+}
+
 body {
 	background-color: white;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.heading {
+	text-align: center;
+	font-family: 'hamster', sans-serif;
+	font-size: 2.6em;
+	color: grey;
+}
+.lists {
+	display: table;
+	width: 100%;
+	border-spacing: 2em;
+}
+.lists > section {
+	display: table-cell;
+	background-color: lightblue;
+	box-shadow: 0.26em 0.26em 0.8em grey;
+}
+
+.lists .list-heading {
+	height: 20%;
+	background-color: steelblue;
+	margin-top: -1.2em;
+	color: white;
+	text-align: center;
+}
+
+.list {
+}
+
+.on-list, .in-cart, .discarded {
 }

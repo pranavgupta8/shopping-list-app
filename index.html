@@ -2,29 +2,50 @@
 <html>
 <head>
 	<title>Your Shopping List</title>
-	<link href="css/style.css" rel=stylesheet type="text/css">
+	<link href='css/style.css' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 </head>
 <body>
 <section class="heading">
 	<h1>My Shopping List</h1>
 </section>
 <section class="lists">
-	<div class="on-list">
-		<ul>
-			<li><input type="checkbox" onclick='javascript:return false'/>Milk</li>
-			<li><input type="checkbox" onclick='javascript:return false'/>Butter</li>
-			<li><input type="checkbox" onclick='javascript:return false'/>Bread</li>
-		</ul>
-	</div>
-	<div class="in-cart">
-		<ul>
-			<li><input type="checkbox" checked onclick='javascript:return false'/>Apples</li>
-			<li><input type="checkbox" checked onclick='javascript:return false'/>Mangoes</li>
-		</ul>
-	</div>
-	<div class="discarded">
-	</div>
+	<section class="on-list">
+		<div class="list-heading">
+			<h2>On my List</h2>
+		</div>
+		<div class="list">
+			<ul>
+				<li><input type="checkbox" onclick='javascript:return false'/>Milk</li>
+				<li><input type="checkbox" onclick='javascript:return false'/>Butter</li>
+				<li><input type="checkbox" onclick='javascript:return false'/>Bread</li>
+			</ul>
+		</div>
+	</section>
+	<section class="in-cart">
+		<div class="list-heading">
+			<h2>In my Cart</h2>
+		</div>
+		<div class="list">
+			<ul>
+				<li><input type="checkbox" checked onclick='javascript:return false'/>Apples</li>
+				<li><input type="checkbox" checked onclick='javascript:return false'/>Mangoes</li>
+			</ul>
+		</div>
+	</section>
+	<section class="discarded">
+		<div class="list-heading">
+			<h2>Discarded</h2>
+		</div>
+		<div class="list">
+			<ul>
+				<li>Peanuts</li>
+			</ul>
+		</div>
+	</section>
 </section>
-<section></section>
+<section class="footer">
+	
+</section>
 </body>
 </html>	
