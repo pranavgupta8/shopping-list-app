@@ -14,6 +14,12 @@ body {
 	font-size: 2.6em;
 	color: grey;
 }
+
+.new-items {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+
 .lists {
 	display: table;
 	width: 100%;
@@ -26,15 +32,33 @@ body {
 }
 
 .lists .list-heading {
-	height: 20%;
+	
 	background-color: steelblue;
 	margin-top: -1.2em;
 	color: white;
 	text-align: center;
 }
 
+h2 {
+	margin-top: auto;
+	margin-bottom: auto;
+	padding-top: 1.7rem;
+	padding-bottom: 1.7rem;
+}
+
+p {
+	margin-top: -4rem;
+	margin-right: 1.7rem;
+	float: right;
+	font-size: 2.2em;
+}
+
 .list {
 }
 
 .on-list, .in-cart, .discarded {
+}
+
+li {
+	display: block;
 }
