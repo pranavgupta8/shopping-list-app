@@ -1,48 +1,76 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
 	<title>Your Shopping List</title>
+	
 	<link href='css/style.css' rel='stylesheet' type='text/css'>
+	<link href='css/normalize.css' rel='stylesheet' type='text/css'>
+	
 	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+
 </head>
+
 <body>
+
 <section class="heading">
+
 	<h1>My Shopping List</h1>
+
 </section>
+
 <section class="new-items">
-	<form>
-		<input type="text" name="newitem" placeholder="enter item">
-		<input type="submit" value="Add" title="click to add item">
-	</form>
+
+	<input type="text" name="newitem" placeholder="enter item">
+	<input type="submit" value="add" title="click to add item">
+
 </section>
+
 <section class="lists">
+	
 	<section class="on-list">
+		
 		<div class="list-heading">
 			<h2>On my List</h2>
 			<p>+</p>
 		</div>
+		
 		<div class="list">
 			<ul></ul>
 		</div>
+
 	</section>
+	
 	<section class="in-cart">
+		
 		<div class="list-heading">
 			<h2>In my Cart</h2>
 		</div>
+		
 		<div class="list">
 			<ul></ul>
 		</div>
+
 	</section>
+	
 	<section class="discarded">
+		
 		<div class="list-heading">
 			<h2>Not Buying</h2>
 		</div>
+		
 		<div class="list">
 			<ul></ul>
 		</div>
+
 	</section>
+
 </section>
+
 <script src="http://code.jquery.com/jquery.min.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
+
 </body>
+
 </html>	
