@@ -23,11 +23,10 @@ $( document ).ready(function() {
 		$('.on-list ul').append($('<li><input type="checkbox" name="item' + i + '" value="' + newitem + '"/>' + newitem + '</li>'));
 		$('input[type=text').val("");
 		i++;
+		$('li').css('cursor', 'pointer');
 	});
 	
-	$('.on-list ul')
-	.css('cursor', 'pointer')
-	.on('click', 'li', function(){ //Item moved from List to Cart
+	$('.on-list ul').on('click', 'li', function(){ //Item moved from List to Cart
 		var cartitem = $( this ).text();
 		$('.in-cart ul').append($('<li><input type="checkbox" checked name="item' + i + '" value="' + cartitem + '"/>' + cartitem + '</li>'))
 		$( this ).html("");
@@ -35,12 +34,11 @@ $( document ).ready(function() {
 
 	});
 	
-	$('.in-cart ul')
-	.css('cursor', 'pointer')
-	.on('click', 'li', function(){ //Item moved from Cart to List
+	$('.in-cart ul').on('click', 'li', function(){ //Item moved from Cart to List
 		var listitem = $( this ).text();
 		$('.on-list ul').append($('<li><input type="checkbox" name="item' + i + '" value="' + listitem + '"/>' + listitem + '</li>'))
 		$( this ).html("");
 		i++;
 	});
+
 });
