@@ -5,13 +5,13 @@ $( document ).ready(function() {
 
 	$('p')
 	.css('cursor', 'pointer')
-	
-	.mouseover(function(){
-		
+
+	.ready(function(){
 		if(click == 1) $( this ).prop('title', 'show the add item box');
 		
 		if(click == 2) $( this ).prop('title', 'hide the add item box');
 	})
+
 	.click(function(){
 		
 		if(click == 1) {
@@ -24,6 +24,7 @@ $( document ).ready(function() {
 		});
 
 	$('input[type=submit]').click(function(e) { //New Item Addition
+	
 		e.preventDefault();
 		
 		var newitem = $('input[type=text]').val();
