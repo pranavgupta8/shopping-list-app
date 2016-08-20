@@ -10,9 +10,9 @@
 	<h1>My Shopping List</h1>
 </section>
 <section class="new-items">
-	<form action="new_items_input.asp">
-		enter to add to list <input type="text" name="newitem">
-		<input type="submit" value="add">
+	<form>
+		<input type="text" name="newitem" placeholder="enter item">
+		<input type="submit" value="Add">
 	</form>
 </section>
 <section class="lists">
@@ -23,9 +23,6 @@
 		</div>
 		<div class="list">
 			<ul>
-				<li><input type="checkbox" onclick='javascript:return false'/>Milk</li>
-				<li><input type="checkbox" onclick='javascript:return false'/>Butter</li>
-				<li><input type="checkbox" onclick='javascript:return false'/>Bread</li>
 			</ul>
 		</div>
 	</section>
@@ -42,7 +39,7 @@
 	</section>
 	<section class="discarded">
 		<div class="list-heading">
-			<h2>Discarded</h2>
+			<h2>Not Buying</h2>
 		</div>
 		<div class="list">
 			<ul>
@@ -54,5 +51,7 @@
 <section class="footer">
 	
 </section>
+<script src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>	

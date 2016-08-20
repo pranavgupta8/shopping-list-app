@@ -11,7 +11,7 @@ body {
 .heading {
 	text-align: center;
 	font-family: 'hamster', sans-serif;
-	font-size: 2.6em;
+	font-size: 2.6rem;
 	color: grey;
 }
 
@@ -20,21 +20,35 @@ body {
 	margin-bottom: 3rem;
 }
 
+input[type=text], input[type=submit] {
+	padding: 0.7rem 1rem;
+	box-sizing: border-box;
+	color: #3d3c3d;
+}
+
+input[type=submit] {
+	background-color: grey;
+	color: white;
+	border: 0.2rem solid grey;
+	border-radius: 0.4rem;
+}
+
 .lists {
 	display: table;
 	width: 100%;
-	border-spacing: 2em;
+	border-spacing: 2rem;
 }
 .lists > section {
 	display: table-cell;
+	width: 33%;
 	background-color: lightblue;
-	box-shadow: 0.26em 0.26em 0.8em grey;
+	box-shadow: 0.26rem 0.26rem 0.8rem grey;
 }
 
 .lists .list-heading {
 	
 	background-color: steelblue;
-	margin-top: -1.2em;
+	margin-top: -1.2rem;
 	color: white;
 	text-align: center;
 }
@@ -50,7 +64,7 @@ p {
 	margin-top: -4rem;
 	margin-right: 1.7rem;
 	float: right;
-	font-size: 2.2em;
+	font-size: 2.2rem;
 }
 
 .list {
