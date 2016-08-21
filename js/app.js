@@ -2,6 +2,7 @@ $( document ).ready(function() {
 	
 	var click=1;
 	var i=1;
+	var newitem=null;
 
 	$('p')
 	.css('cursor', 'pointer')
@@ -23,17 +24,42 @@ $( document ).ready(function() {
 			click=1;}
 		});
 
-	$('input[type=submit]').click(function(e) { //New Item Addition
+	$('#add').click(function(e) { //New Item Addition
 	
 		e.preventDefault();
 		
-		var newitem = $('input[type=text]').val();
-		$('.on-list ul').append($('<li><input type="checkbox" name="item' + i + '" value="' + newitem + '"/> ' + newitem + '</li>'));
-		$('input[type=text').val("");
+		newitem = $('#newitem').val();
 		
-		i++;
+		if (newitem == null || newitem == "") {
+			
+			alert('Please put in some Item Name');
+			return false;	
+		}
+		else {
 		
+			$('.on-list ul').append($('<li><input type="checkbox" name="item' + i + '" value="' + newitem + '"/> ' + newitem + '</li>'));
+			$('#newitem').val("");
+		
+			i++;
+		}
+
 		$('li').css('cursor', 'pointer');
+	});
+
+	$('#newitem').keydown(function(event){
+		
+		if (event.keyCode == 13) {
+		
+			if (newitem != null || newitem != "") {
+				$('#add').click();
+				return false;
+			}
+		
+			else {
+				 alert('Please put in some Item Name');
+				 return false;
+			}
+		}
 	});
 	
 	$('.on-list ul').on('click', 'li', function(){ //Item moved from List to Cart
