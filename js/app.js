@@ -6,7 +6,7 @@ $( document ).ready(function() {
 	$('p')
 	.css('cursor', 'pointer')
 
-	.ready(function(){
+	.mouseover(function(){
 		if(click == 1) $( this ).prop('title', 'show the add item box');
 		
 		if(click == 2) $( this ).prop('title', 'hide the add item box');
