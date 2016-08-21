@@ -71,4 +71,9 @@ p {
 
 li {
 	display: block;
+
+}
+
+.fa-trash-o {
+	cursor: pointer;
 }

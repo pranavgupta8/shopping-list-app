@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 	
 	var click=1;
-	var i=1;
+	var i=j=1;
 	var newitem=null;
 
 	$('#add')
@@ -20,6 +20,7 @@ $( document ).ready(function() {
 			click = 2;}
 		
 		else {
+		
 			$('.new-items').fadeOut("fast");
 			click =	1;}
 	});
@@ -28,7 +29,7 @@ $( document ).ready(function() {
 	.css('cursor', 'pointer')
 
 	.click(function(){
-		$('.dicarded ul').html("");
+		$('.discarded ul').html("");
 	});
 
 	$('#submit').click(function(e) { //New Item Addition
@@ -44,13 +45,17 @@ $( document ).ready(function() {
 		}
 		else {
 		
-			$('.on-list ul').append($('<li><input type="checkbox" name="item' + i + '" value="' + newitem + '"/> ' + newitem + '</li>'));
+			$('.on-list ul').append($('<li><input type="checkbox" name="item' + i + '" value="' + newitem + '" class="checkbox"/> ' + '<i class="fa fa-trash-o fa-lg-o-o aria-hidden=true"></i> ' + newitem + '</li>'));
 			$('#newitem').val("");
 		
+
+			$('.fa-trash-o').hover(function(){
+			
+				$( this ).prop('title', 'discard this item')
+			});
+
 			i++;
 		}
-
-		$('li').css('cursor', 'pointer');
 	});
 
 	$('#newitem').keydown(function(event){
@@ -75,28 +80,57 @@ $( document ).ready(function() {
 
 	.on('click', 'li', function(){ //Item moved from List to Cart
 		
-		var cartitem = $( this ).text();
-		$('.in-cart ul').append($('<li><input type="checkbox" checked name="item' + i + '" value="' + cartitem + '"/> ' + cartitem + '</li>')).hide().fadeIn("medium");
-		$( this ).html("");
+		if($('.checkbox').is(':checked')) {
+		
+			var cartitem = $( this ).text();
+			$('.in-cart ul').append($('<li><input type="checkbox" checked name="item' + j + '" value="' + cartitem + '" class="checkbox"/> ' + '<i class="fa fa-trash-o fa-lg-o"></i> ' + cartitem + '</li>')).hide().fadeIn("medium");
+			$( this ).html("");
+			
+			
+			$('.fa-trash-o').hover(function(){
+		
+				$( this ).prop('title', 'discard this item')
+			});
+
+			j++;
+		}
+
+		else if($('.fa-trash-o').mousedown()) {
+
+			var trashitem = $( this ).text();
+			$('.discarded ul').append($('<li>' + trashitem + '</li>')).hide().fadeIn("medium");
+			$( this ).html("");
+		}
 		
 		if(i>1) i--;
-
 	})
-
-	.mouseenter(function(){
-
-		$('li').append();
-	});
 	
 	$('.in-cart ul')
 
 	.on('click', 'li', function(){ //Item moved from Cart to List
 		
+		if(!$('.checkbox').is(':checked')) {
 		var listitem = $( this ).text();
-		$('.on-list ul').append($('<li><input type="checkbox" name="item' + i + '" value="' + listitem + '"/> ' + listitem + '</li>')).hide().fadeIn("medium");
+		$('.on-list ul').append($('<li><input type="checkbox" name="item' + i + '" value="' + listitem + '" class="checkbox"/> ' + '<i class="fa fa-trash-o fa-lg-o-o"></i> '	 + listitem + '</li>')).hide().fadeIn("medium");
 		$( this ).html("");
 		
+
+		$('.fa-trash-o').hover(function(){
+		
+			$( this ).prop('title', 'discard this item')
+		});
+
 		i++;
+		}
+
+		else if($('.fa-trash-o-o').mousedown()) {
+
+			var trashitem = $( this ).text();
+			$('.discarded ul').append($('<li>' + trashitem + '</li>')).hide().fadeIn("medium");
+			$( this ).html("");	
+		}
+
+		if(j>1) j--;
 	});
 
 });
